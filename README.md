@@ -50,9 +50,9 @@
 
 3、声明式渲染
 --------------------
-      `  <div id="app">
+      `<div id="app">`
             {{ message }}
-        </div>
+       ` </div>`
 
         let app = new Vue({
             el: '#app',
@@ -60,9 +60,9 @@
                 message: 'Hello Vue!'
             }
         })
-        `
+       
     输出结果：Hello Vue!
-
+`
 4、是否渲染 v-if
 --------------------
 `
