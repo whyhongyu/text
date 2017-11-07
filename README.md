@@ -102,7 +102,7 @@ let app3 = new Vue({
 
 5、循环 v-for
 ---------------------
-
+`
 <div id="app-4">
   <ol>
     <li v-for="todo in todos">
@@ -120,19 +120,21 @@ var app4 = new Vue({
     ]
   }
 })
-
+`
 输出结果: 1.学习 JavaScript
+
          2.学习 Vue
+         
          3.整个牛项目
 
        这个指令在我们后台使用的话可以很有效的提高性能，不用操作DOM 只要控制数据就可以;
 
        在控制台里，输入 app4.todos.push({ text: '新项目' })，你会发现列表中添加了一个新项
-
+       
   
 6、双向绑定
 ------------------
-
+`
 <div id="app-6">
   <p>{{ message }}</p>
   <input v-model="message">
@@ -143,7 +145,7 @@ var app6 = new Vue({
     message: 'Hello Vue!'
   }
 })
-
+`
 把代码放到页面上看的话就是两行文字,第一行： Hello Vue!  第二行是一个输入框，里面写着Hello Vue!
 
 只要第二行输入框里面的值改变了，第一行也就会改变，说的双向绑定说的很高大上。其实个人认为也就是跟
