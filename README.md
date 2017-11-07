@@ -25,7 +25,7 @@
 
 修饰符  
 =====================
-       在事件处理程序中调用 event.preventDefault() 或 event.stopPropagation() 是非常常见的需求。
+        在事件处理程序中调用 event.preventDefault() 或 event.stopPropagation() 是非常常见的需求。
        
         尽管我们可以在 methods 中轻松实现这点，但更好的方式是：methods 只有纯粹的数据逻辑，而不是去处理 DOM 事件细节。
        
@@ -82,17 +82,17 @@
 
 4、是否渲染 v-if
 --------------------
-`
-<div id="app-3">
-  <p v-if="seen">现在你看到我了</p>
-</div>
-let app3 = new Vue({
-  el: '#app-3',
-  data: {
-    seen: true
-  }
-})
-`
+       `
+       <div id="app-3">
+         <p v-if="seen">现在你看到我了</p>
+       </div>
+       let app3 = new Vue({
+         el: '#app-3',
+         data: {
+           seen: true
+         }
+       })
+       `
        控制data里面的seen的值就能控制浏览器是否渲染，这里和display的显隐是不一样的，display是浏览器已经渲染出来了，
 
        只是不显示出来而已（在控制台上可以看到该元素），这里的控制是让浏览器不渲染出来，也就是看不到这个元素，控制台也看不到。
@@ -102,25 +102,25 @@ let app3 = new Vue({
 
 5、循环 v-for
 ---------------------
-`
-<div id="app-4">
-  <ol>
-    <li v-for="todo in todos">
-      {{ todo.text }}
-    </li>
-  </ol>
-</div>
-var app4 = new Vue({
-  el: '#app-4',
-  data: {
-    todos: [
-      { text: '学习 JavaScript' },
-      { text: '学习 Vue' },
-      { text: '整个牛项目' }
-    ]
-  }
-})
-`
+       `
+       <div id="app-4">
+         <ol>
+           <li v-for="todo in todos">
+             {{ todo.text }}
+           </li>
+         </ol>
+       </div>
+       var app4 = new Vue({
+         el: '#app-4',
+         data: {
+           todos: [
+             { text: '学习 JavaScript' },
+             { text: '学习 Vue' },
+             { text: '整个牛项目' }
+           ]
+         }
+       })
+       `
 输出结果: 1.学习 JavaScript
 
          2.学习 Vue
@@ -134,26 +134,26 @@ var app4 = new Vue({
   
 6、双向绑定
 ------------------
-`
-<div id="app-6">
-  <p>{{ message }}</p>
-  <input v-model="message">
-</div>
-var app6 = new Vue({
-  el: '#app-6',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-`
-把代码放到页面上看的话就是两行文字,第一行： Hello Vue!  第二行是一个输入框，里面写着Hello Vue!
+       `
+       <div id="app-6">
+         <p>{{ message }}</p>
+         <input v-model="message">
+       </div>
+       var app6 = new Vue({
+         el: '#app-6',
+         data: {
+           message: 'Hello Vue!'
+         }
+       })
+              `
+       把代码放到页面上看的话就是两行文字,第一行： Hello Vue!  第二行是一个输入框，里面写着Hello Vue!
 
-只要第二行输入框里面的值改变了，第一行也就会改变，说的双向绑定说的很高大上。其实个人认为也就是跟
+       只要第二行输入框里面的值改变了，第一行也就会改变，说的双向绑定说的很高大上。其实个人认为也就是跟
 
-oninput事件差不多,这是第一点;
+       oninput事件差不多,这是第一点;
 
-双向绑定在早期的时候在组件是能双向绑定的，但是后来发现AngularJS（AngularJS 1）中双向绑定太过复杂，让初学者望而却步；
+       双向绑定在早期的时候在组件是能双向绑定的，但是后来发现AngularJS（AngularJS 1）中双向绑定太过复杂，让初学者望而却步；
 
-考虑到方方面面的原因之后，Vue 在不同组件间强制使用单向数据流。这使应用中的数据流更加清晰易懂。
+       考虑到方方面面的原因之后，Vue 在不同组件间强制使用单向数据流。这使应用中的数据流更加清晰易懂。
 
 
